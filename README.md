@@ -21,6 +21,12 @@ The above operations must be authorized before being performed. The authorizatio
    1. All permissions a Casting Director has and…
    2. Add or delete a movie from the database
 
+## Deployed Application
+
+The Application is deployed using Render and it is available in the following URL
+
+        `https://capstone-fsdn-final.onrender.com`
+
 ## Setting up the App
 
 ### Install Dependencies
@@ -29,31 +35,27 @@ The above operations must be authorized before being performed. The authorizatio
 
 2. **Virtual Environment** - We recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organized. Instructions for setting up a virual environment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
 
-3. **PIP Dependencies** - Once your virtual environment is setup and running, install the required dependencies by navigating to the `/backend` directory and running:
+```bash
+python -m venv venv
+source venv/Scripts/activate # for windows
+source venv/bin/activate # for linux
+```
+
+3. **PIP Dependencies** - Once your virtual environment is setup and running, install the required dependencies by running:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-#### Key Pip Dependencies
+### Setting up the Environment variables
 
-- [Flask](http://flask.pocoo.org/) is a lightweight backend microservices framework. Flask is required to handle requests and responses.
+The environment variables are listed in `.\setup.sh` file, you may need to modify accordingly based on your needs
 
-- [SQLAlchemy](https://www.sqlalchemy.org/) is the Python SQL toolkit and ORM we'll use to handle the lightweight SQL database. You'll primarily work in `app.py`and can reference `models.py`.
-
-- [Flask-CORS](https://flask-cors.readthedocs.io/en/latest/#) is the extension we'll use to handle cross-origin requests from our frontend server.
+```bash
+setup.sh
+```
 
 ### Set up the Database
-
-Set Database Environment variables
-
-```bash
-export DB_NAME="casting"
-```
-
-```bash
-export DB_PATH="postgresql+psycopg2://postgres@localhost:5432/casting"
-```
 
 With Postgres running, create a `casting` database:
 
@@ -70,7 +72,7 @@ flask db upgrade
 
 ### Run the Server
 
-From within the `./starter` directory first ensure you are working using your created virtual environment.
+From within the directory first ensure you are working using your created virtual environment.
 
 To run the server, execute:
 
@@ -81,6 +83,28 @@ flask run --reload
 The `--reload` flag will detect file changes and restart the server automatically.
 
 ## API Documentation
+
+`GET '/api/v1.0/'`
+
+- Fetches index page
+- Returns - JSON
+
+```json
+{
+  "HelloWorld": "Welcome to FSND capstone project..."
+}
+```
+
+`GET '/api/v1.0/auth'`
+
+- Redirects to AUTH0 page for authentication
+- Returns - JSON
+
+```json
+{
+  "auth-url": "https://dev-gz5tjefp2qw5ta7u.us.auth0.com/authorize?audience=casting&response_type=token&client_id=QDgll2Kz5legko3qqcZOQqvpn0ksolEi&redirect_uri=https://capstone-fsdn-final.onrender.com"
+}
+```
 
 `GET '/api/v1.0/movies'`
 
@@ -286,10 +310,16 @@ The `--reload` flag will detect file changes and restart the server automaticall
 
 ## Testing
 
-In case if you want to run the test cases against separate DB use,
+The environment variables are listed in `.\setup.sh` file, you may need to modify accordingly based on your needs
 
 ```bash
-export DB_NAME="casting_test"
+test_setup.sh
+```
+
+With Postgres running, create a `casting_test` database:
+
+```bash
+createdb casting_test
 ```
 
 To deploy the tests, run
