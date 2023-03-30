@@ -310,16 +310,16 @@ The `--reload` flag will detect file changes and restart the server automaticall
 
 ## Testing
 
-The environment variables are listed in `.\setup.sh` file, you may need to modify accordingly based on your needs
-
-```bash
-test_setup.sh
-```
-
-With Postgres running, create a `casting_test` database:
+With Postgres running, create a `casting_test` database (in case if you want to use separate db):
 
 ```bash
 createdb casting_test
+```
+
+The environment variables are listed in `.\test_setup.sh` file, you may need to modify accordingly based on your needs
+
+```bash
+test_setup.sh
 ```
 
 To deploy the tests, run
@@ -333,3 +333,7 @@ or
 ```bash
 python -m unittest test_app.py
 ```
+
+## PostMan Tests
+
+The Postman test collection is available in the `.\POSTMAN_collections` folder. You may need to modify the test case token and id's which you want to delete or patch based on the needs.

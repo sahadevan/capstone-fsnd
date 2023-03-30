@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import json
 
-DB_PATH = os.getenv('DB_PATH', 'postgresql+psycopg2://postgres:admin@localhost:5432/casting')
+DB_PATH = os.getenv('DB_PATH', 'postgresql+psycopg2://postgres@localhost:5432/casting')
 
 database_path = DB_PATH
 db = SQLAlchemy()

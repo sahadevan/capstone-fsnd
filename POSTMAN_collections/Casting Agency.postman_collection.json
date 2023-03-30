@@ -1,0 +1,502 @@
+{
+	"info": {
+		"_postman_id": "464622c5-bacc-4acd-a717-ff432a098615",
+		"name": "Casting Agency",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5752404"
+	},
+	"item": [
+		{
+			"name": "Casting Assistant",
+			"item": [
+				{
+					"name": "Get Movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://capstone-fsdn-final.onrender.com/movies",
+							"protocol": "https",
+							"host": [
+								"capstone-fsdn-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Actors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://capstone-fsdn-final.onrender.com/actors",
+							"protocol": "https",
+							"host": [
+								"capstone-fsdn-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InlLMGxKS1UtN0xjcndvT0RTbEUxdCJ9.eyJpc3MiOiJodHRwczovL2Rldi1nejV0amVmcDJxdzV0YTd1LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NDAzNDdmOWFkMmE1YTdjZTk5N2QzYTQiLCJhdWQiOiJjYXN0aW5nIiwiaWF0IjoxNjgwMTkzOTkwLCJleHAiOjE2ODAyODAzOTAsImF6cCI6IlFEZ2xsMkt6NWxlZ2tvM3FxY1pPUXF2cG4wa3NvbEVpIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyJdfQ.UdCCq_PYHnpVxhFy72eyzJojLTz2qZZMgEHL0sfP4oSRHZTcZ-LNHimHWxwzPELCTVdR0He2caRGn8UGCh3GRQd2P3SFG8QE_qP-xxq_1TX-6gYpgLzZWbtlAPMJz3Xcrfg82kGjqLg7iYlcoP4yZ1i0rblSc3tmGSUvSwKHEvsDo0arhYQivlo4rxTHozHl6FOYlBCgm-89MZCuZ9sfDZSqaJf2FtB_7bhfMEdQ8IgPmU-yq5DrguXQNXlLKtXrMxydQ8UNgTVoiUvr40okcis5gnlSMmqREawQjVNn9kqgQr2FkUU3DJN7vT4PNWXTDNrzbEML9D9mh3dB-d4MJA",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Executive Producer",
+			"item": [
+				{
+					"name": "Get Movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://capstone-fsdn-final.onrender.com/movies",
+							"protocol": "https",
+							"host": [
+								"capstone-fsdn-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Actors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://capstone-fsdn-final.onrender.com/actors",
+							"protocol": "https",
+							"host": [
+								"capstone-fsdn-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Actor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Rajinikanth\",\r\n    \"age\": 70,\r\n    \"gender\": \"Male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-fsdn-final.onrender.com/actors",
+							"protocol": "https",
+							"host": [
+								"capstone-fsdn-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Movie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Frozen 2\",\r\n    \"release_date\": \"2021-04-08\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-fsdn-final.onrender.com/movies",
+							"protocol": "https",
+							"host": [
+								"capstone-fsdn-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch Actor",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Stone Gold Steve Austin\",\r\n    \"age\": 70,\r\n    \"gender\": \"Male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-fsdn-final.onrender.com/actors/1",
+							"protocol": "https",
+							"host": [
+								"capstone-fsdn-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"actors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch Movie",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"The Fall\",\r\n    \"release_date\": \"2023-03-25\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-fsdn-final.onrender.com/movies/1",
+							"protocol": "https",
+							"host": [
+								"capstone-fsdn-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Actor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-fsdn-final.onrender.com/actors/1",
+							"protocol": "https",
+							"host": [
+								"capstone-fsdn-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"actors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Movie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-fsdn-final.onrender.com/movies/1",
+							"protocol": "https",
+							"host": [
+								"capstone-fsdn-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InlLMGxKS1UtN0xjcndvT0RTbEUxdCJ9.eyJpc3MiOiJodHRwczovL2Rldi1nejV0amVmcDJxdzV0YTd1LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDEwODI2MTk1NjE2MTk3MzY0MDM0MSIsImF1ZCI6ImNhc3RpbmciLCJpYXQiOjE2ODAxOTM4MDQsImV4cCI6MTY4MDI4MDIwNCwiYXpwIjoiUURnbGwyS3o1bGVna28zcXFjWk9RcXZwbjBrc29sRWkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.Me0VxmmpN6hU9PMCYotAPBlnVUSpvfWkHt8XfV8ec8KSuM_f3W05blNPGjSnTkH_FRBbNzm3IiCjhAeoZXNtJL8xsPpaweY8rP11rbdajznRUKYnAxeW9wbeioSdF8c6coL-DwUww7_TapY-c7kfNAgNvO6onDO_Ib0cm0McUK4AiY6v_evU6GBX6Uzl4RXItD3HhpCJpLz4zxhjPHg3I-YE2H_rfDNEJFxzW5F_DmzbcO2g3tMFwMvaHQJnvgqtL0wmOgaZ-QNyHmH4las55BZboe_jgbjHKIaUovgG-Ktimluur_PPEH6J0pOA1He_ZKVBHsOa2E9GhrkDMPZpfg",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Casting Director",
+			"item": [
+				{
+					"name": "Get Movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://capstone-fsdn-final.onrender.com/movies",
+							"protocol": "https",
+							"host": [
+								"capstone-fsdn-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Actors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://capstone-fsdn-final.onrender.com/actors",
+							"protocol": "https",
+							"host": [
+								"capstone-fsdn-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Actor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"stone gold\",\r\n    \"age\": 70,\r\n    \"gender\": \"Male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-fsdn-final.onrender.com/actors",
+							"protocol": "https",
+							"host": [
+								"capstone-fsdn-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch Actor",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"stone gold steve austin\",\r\n    \"age\": 70,\r\n    \"gender\": \"Male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-fsdn-final.onrender.com/actors/1",
+							"protocol": "https",
+							"host": [
+								"capstone-fsdn-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"actors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Actor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capstone-fsdn-final.onrender.com/actors/1",
+							"protocol": "https",
+							"host": [
+								"capstone-fsdn-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"actors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InlLMGxKS1UtN0xjcndvT0RTbEUxdCJ9.eyJpc3MiOiJodHRwczovL2Rldi1nejV0amVmcDJxdzV0YTd1LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDExMzgxMzU5NDU5NzYwMjU4MDMzNSIsImF1ZCI6ImNhc3RpbmciLCJpYXQiOjE2ODAxOTM2MTcsImV4cCI6MTY4MDI4MDAxNywiYXpwIjoiUURnbGwyS3o1bGVna28zcXFjWk9RcXZwbjBrc29sRWkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIl19.iqOGHosZkRRpOuLzUiwDArrUEw-0Dzwfn0rux_TucerokTM-pPgjAjSRQeMrJIlWTtBGlKVKenjCrW1O2c4PdEjClQhQ1R-en0P7VCLEOEwnbUlFM3teEMcjtNHE_s2MmWhKWZTgYI5Bziwz2sS-_W_1iQT7rShg2fpij9AxoUiU_6GwVAzeRe4pnBDnXSNyj6N7SlZXlX_vudGrbKMkZ978FlmUK0Rr0Wo-9wav0fNhISrkC6hrWRAM5SYB8EVWrXEWLE0etAZ4GwsFtVHaittaapLWBqipVD_WpLidlac7KjdBCPK_d3mYCSgbiiVeRvsW2hlsYKsPYIfx9XGxww",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
